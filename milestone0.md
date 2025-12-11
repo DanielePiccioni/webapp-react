@@ -1,0 +1,11 @@
+### Milestone 0
+- creazione del progetto react con vite
+- pulire i file iniziali
+- installare axios, boostrap, react-router-dom
+- creazione in un layout generale
+- aggiungiamo alcune rotte principali "homepage"
+- creazione dei componenti
+- usare middleware CORS per configuare la backend
+- chiamata api con axios
+- stampare i risultati in pagina
+- stilizzare la pagina
