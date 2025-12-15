@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import Header from "../components/Header"
+import Header from "../components/Header";
 import Footer from "../components/Footer"
 
 export default function DefaultLayout() {
@@ -7,7 +7,9 @@ export default function DefaultLayout() {
     return (
         <>
             <Header />
-            <Outlet />
+            <main className="flex-grow-1">
+                <Outlet />
+            </main>
             <Footer />
         </>
     )
