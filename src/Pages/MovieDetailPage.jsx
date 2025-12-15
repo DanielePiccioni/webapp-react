@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ReviewList from "../components/ReviewList";
+import ReviewForm from "../components/ReviewForm";
+
 
 export default function MovieDetailPage() {
 
@@ -30,6 +32,17 @@ export default function MovieDetailPage() {
                 <p>Anno: {movie.movie.release_year}</p>
                 <p>Regista: {movie.movie.director}</p>
                 <ReviewList reviews={movie.reviews} />
+                <ReviewForm
+                    movieId={id}
+                    onReviewAdded={(newReview) => {
+                        setMovie((prevMovie) => ({
+                            ...prevMovie,
+                            reviews: [...(prevMovie.reviews || []), newReview]
+                        }));
+                    }}
+                />
+
+
             </div>
         </>
     );
